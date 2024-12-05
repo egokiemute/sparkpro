@@ -21,7 +21,7 @@ async function handleFormSubmit(e) {
     if (!name || !email || serviceType === "0" || !message) {
         errorMessage.textContent = "Please fill in all required fields.";
         errorMessage.classList.remove("d-none");
-        return; // Stop submission if validation fails
+        return;
     }
 
     try {
@@ -39,7 +39,7 @@ async function handleFormSubmit(e) {
                 "Thank you for your message. We will reply to you shortly!";
             successMessage.classList.remove("d-none");
             errorMessage.classList.add("d-none");
-            e.target.reset(); // Reset the form after success
+            e.target.reset();
         } else {
             errorMessage.textContent = "Something went wrong! Please try again.";
             errorMessage.classList.remove("d-none");
